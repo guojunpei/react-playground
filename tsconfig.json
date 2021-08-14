@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "lib": ["DOM", "ES2017"],
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"]
+}
