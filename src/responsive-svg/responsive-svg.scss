@@ -1,0 +1,68 @@
+$colorDark: #005005;
+$colorMain: #2e7d32;
+$colorLight: #60ad5e;
+
+.responsive-svg {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  & > h3 {
+    text-align: center;
+    color: $colorDark;
+  }
+
+  .top-section {
+    padding: 20px;
+    font-family: sans-serif;
+    text-align: center;
+
+    & > h1,
+    & > p {
+      text-align: center;
+      color: $colorDark;
+    }
+  }
+
+  .flex-row {
+    display: flex;
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-col svg,
+  .flex-row svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;
+    background-color: $colorMain;
+    color: white;
+    border-color: $colorLight;
+    cursor: pointer;
+  }
+
+  button:hover,
+  button:focus,
+  button:active {
+    background-color: $colorDark;
+    border-color: $colorDark;
+  }
+
+  .active {
+    background-color: $colorDark;
+    color: white;
+  }
+
+  .bottom-section {
+    height: 100%;
+    background-color: $colorMain;
+    color: white;
+    text-align: center;
+  }
+}
