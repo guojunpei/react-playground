@@ -6,7 +6,7 @@ $space_xs: 0.5rem;
 $space_xl: 2rem;
 $space_l: 1rem;
 
-body {
+html, body {
   margin: 0;
   height: 100%;
 }
@@ -14,4 +14,5 @@ body {
 #root {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }

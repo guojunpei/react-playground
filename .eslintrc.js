@@ -30,7 +30,9 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'max-len': 'warn',
+    'react/prop-types': 'off',
     'no-confusing-arrow': 'off',
     'import/prefer-default-export': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };
