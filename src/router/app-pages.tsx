@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home } from '../home/home';
+import { Game } from '../react-tutorial/game';
 import { ResponsiveSvg } from '../responsive-svg/responsive-svg';
 import { AppPageRouterPathType } from '../types/app-types';
 
@@ -16,5 +17,9 @@ export const appPages: AppPageType[] = [
   {
     component: <Home />,
     path: '/',
+  },
+  {
+    component: <Game />,
+    path: '/game',
   },
 ];

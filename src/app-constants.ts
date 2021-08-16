@@ -1,1 +1,1 @@
-export const appRouterPaths = ['/', '/responsive-svg'] as const;
+export const appRouterPaths = ['/', '/responsive-svg', '/game'] as const;
