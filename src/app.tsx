@@ -1,6 +1,11 @@
 import React, { FC } from 'react';
-import { ResponsiveSvg } from './responsive-svg/responsive-svg';
+import { BrowserRouter } from 'react-router-dom';
+import { AppRouter } from './router/app-router';
 
 export const App: FC = () => {
-  return <ResponsiveSvg />;
+  return (
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
+  );
 };
