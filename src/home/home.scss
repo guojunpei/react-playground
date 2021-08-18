@@ -1,0 +1,45 @@
+@import '../styles/app-variables.scss';
+
+$colorPrimary: #61dafb;
+$colorDark: #10a8c8;
+$colorLight: #9affff;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $appColorBg;
+  text-align: center;
+  color: $colorPrimary;
+
+  nav {
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0;
+
+      li {
+        padding: 0.5rem;
+        margin: 0.2rem;
+
+        a {
+          text-decoration: none;
+          padding: 0.4rem 0.8rem;
+          color: $colorDark;
+          border-width: 0.1rem;
+          border-style: solid;
+          border-radius: 0.3rem;
+          border-color: transparent;
+          transition-delay: 100ms;
+          transition-duration: 300ms;
+
+          &:hover,
+          &:active,
+          &:focus {
+            color: $colorPrimary;
+            border-color: $colorLight;
+          }
+        }
+      }
+    }
+  }
+}
