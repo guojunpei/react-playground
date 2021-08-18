@@ -18,4 +18,7 @@ module.exports = merge(common, {
       new CssMinimizerPlugin(),
     ],
   },
+  output: {
+    publicPath: '/react-playground/',
+  },
 });
