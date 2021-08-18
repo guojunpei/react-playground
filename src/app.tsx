@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { AppRouter } from './router/app-router';
 
 const getAppBasename = (appPath = 'react-playground') =>
-  window.location.pathname.includes(appPath) ? `/${appPath}/` : '/';
+  window.location.pathname.includes(appPath) ? `/${appPath}` : '/';
 
 export const App: FC = () => {
   return (
