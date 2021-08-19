@@ -42,7 +42,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
     chunkFilename: '[name].[contenthash].js',
-    publicPath: '/',
+    publicPath: 'auto',
   },
   devServer: { historyApiFallback: true },
 };
