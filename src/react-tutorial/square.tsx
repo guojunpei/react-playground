@@ -2,23 +2,18 @@
 import React from 'react';
 
 export interface SquareProps {
-  value: number;
+  value: number | null;
+  squareClickEvent: (e: number | null) => void;
 }
 export class Square extends React.Component<SquareProps, {}> {
-  //TODO: remove the constructor
-  constructor(props:SquareProps){
-    super(props);
-    this.state = {
-      value: null,
-    }
-  }
-
   render() {
-    // TODO: use onClick={this.props.onClick}
-    // TODO: replace this.state.value with this.props.value
-    const { value } = this.props;
+    const { value,squareClickEvent } = this.props;
     return (
-      <button type="button" className="square" onClick={()=>{console.log(`state:${value}`),this.setState({value: `x`})}}>
+      <button
+        type="button"
+        className="square"
+        onClick={() => squareClickEvent(value)}
+      >
         {value}
       </button>
     );

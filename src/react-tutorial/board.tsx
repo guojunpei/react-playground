@@ -1,17 +1,33 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
-import { Square, SquareProps } from './square';
+import { Square } from './square';
 
-export class Board extends React.Component {
-  constructor(props:SquareProps){
+interface BoardState {
+  squares: (number | null)[];
+}
+export class Board extends React.Component<{}, BoardState> {
+  constructor(props: {}) {
     super(props);
     this.state = {
-      squares: Array(9).fill(null)
-    }
+      squares: Array(9).fill(null),
+    };
   }
 
   renderSquare = (i: number) => {
-    return <Square value={this.state.squares[i]} />;
+    const { squares } = this.state;
+    return (
+      <Square
+        value={squares[i]}
+        squareClickEvent={(squareNr) => {
+          if (squareNr === null)
+            this.setState((state) => {
+              const newSquares = state.squares;
+              newSquares[i] = 8;
+              return { squares: newSquares };
+            });
+        }}
+      />
+    );
   };
 
   render() {
@@ -38,6 +54,4 @@ export class Board extends React.Component {
       </div>
     );
   }
-
-
 }
