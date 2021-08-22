@@ -2,8 +2,8 @@
 import React from 'react';
 
 export interface SquareProps {
-  value: number | null;
-  squareClickEvent: (e: number | null) => void;
+  value: number |"X"|"O";
+  squareClickEvent: (e: number |"X"|"O" | null) => void;
 }
 export class Square extends React.Component<SquareProps, {}> {
   render() {
