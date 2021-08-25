@@ -3,21 +3,16 @@ import React from 'react';
 import { findWinner } from './rules';
 import { Square } from './square';
 
-interface BoardState {
+export interface BoardState {
   squares: ( `X` | `O` )[];
   xIsNext: boolean;
 }
 export class Board extends React.Component<{}, BoardState> {
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      squares: Array(9).fill(null),
-      xIsNext: true,
-    };
-  }
-
   handleClick(i: number){
     const squares =this.state.squares.slice();
+    if(findWinner(squares) || squares[i]){
+      return;
+    }
     squares[i] = this.state.xIsNext ? 'X' : 'O';
     this.setState({
       squares: squares,
@@ -39,16 +34,6 @@ export class Board extends React.Component<{}, BoardState> {
   };
 
   render() {
-    const winner = findWinner(this.state.squares);
-
-    let status;
-
-    if(winner){
-      status = `Winner: `+ winner;
-    }else{
-      status =`Next player: `+(this.state.xIsNext ? `X` : `O`);
-    }
-
     return (
       <div>
         <div className="status">{status}</div>
