@@ -10,6 +10,7 @@ export interface BoardState {
 export class Board extends React.Component<{}, BoardState> {
   handleClick(i: number){
     const squares =this.state.squares.slice();
+    
     if(findWinner(squares) || squares[i]){
       return;
     }

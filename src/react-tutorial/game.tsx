@@ -3,16 +3,20 @@ import React from 'react';
 import { Board } from './board';
 import './game.scss';
 import { findWinner } from './rules';
-interface GameState {
-  //squares: ( `X` | `O` )[];
+import { Square } from './square';
+export interface GameState {
+  squares: ( `X` | `O` )[];
+  stepNumber?: number;
   xIsNext: boolean;
   history: {}[];
+
 }
 
 export class Game extends React.Component<{}, GameState> {
   constructor(props:( `X` | `O` )[]){
     super(props)
     this.state = {
+      squares:this.state.squares,
       history: [{
         square: Array(9).fill(null),
       }],
@@ -36,10 +40,30 @@ export class Game extends React.Component<{}, GameState> {
     });
   }
 
+  jumpTo(step:number){
+    this.setState({
+      stepNumber: step,
+      xIsNext:(step % 2) === 0
+    })
+  }
+
   render() {
     const history = this.state.history;
     const current = history[history.length - 1];
     const winner = findWinner(current.squares);
+
+    const moves = history.map((step,move)=>{
+      const desc = move ?
+      'Go to move #' +move :
+      'Go to game start';
+      return(
+        <li key={move}>
+          <button onClick={() =>this.jumpTo(move)}>
+            {desc}
+          </button>
+        </li>
+      );
+    })
 
     let status;
     if (winner) {
@@ -55,7 +79,7 @@ export class Game extends React.Component<{}, GameState> {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{/* TODO */}</ol>
+          <ol>{moves}</ol>
         </div>
       </div>
     );
