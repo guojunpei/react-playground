@@ -9,7 +9,6 @@ export interface GameState {
   stepNumber?: number;
   xIsNext: boolean;
   history: {}[];
-
 }
 
 export class Game extends React.Component<{}, GameState> {
