@@ -3,7 +3,7 @@ import React from 'react';
 import { Square } from './square';
 
 interface BoardProps{
-  squareClickEvent: (e: number |"X"|"O" | null) => void;
+  squareClickEvent: (e: number) => void;
   squares: ( `X` | `O` )[];
 }
 export class Board extends React.Component<BoardProps, {}> {
