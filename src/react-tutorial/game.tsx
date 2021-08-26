@@ -3,28 +3,29 @@ import React from 'react';
 import { Board } from './board';
 import './game.scss';
 import { findWinner } from './rules';
-import { Square } from './square';
-export interface GameState {
+//import { Square } from './square';
+export interface GameProps {
   squares: ( `X` | `O` )[];
-  stepNumber?: number;
+  stepNumber: number;
   xIsNext: boolean;
-  history: {}[];
+  history: {squares:( `X` | `O` )[]}[];
 }
 
-export class Game extends React.Component<{}, GameState> {
-  constructor(props:( `X` | `O` )[]){
+export class Game extends React.Component<{}, GameProps> {
+  constructor(props:GameProps){
     super(props)
     this.state = {
-      squares:this.state.squares,
+      squares:[],
+      stepNumber: 0,
       history: [{
-        square: Array(9).fill(null),
+        squares: Array(9).fill(null),
       }],
       xIsNext: true,
     };
   }
 
   handleClick(i:number){
-    const history = this.state.history;
+    const history = this.state.history.slice(0,this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if(findWinner(squares) || squares[i]){
@@ -35,6 +36,7 @@ export class Game extends React.Component<{}, GameState> {
       history: history.concat([{
         squares:squares
       }]),
+      stepNumber:history.length,
       xIsNext: !this.state.xIsNext,
     });
   }
@@ -48,7 +50,7 @@ export class Game extends React.Component<{}, GameState> {
 
   render() {
     const history = this.state.history;
-    const current = history[history.length - 1];
+    const current = history[this.state.stepNumber];
     const winner = findWinner(current.squares);
 
     const moves = history.map((step,move)=>{
@@ -74,7 +76,11 @@ export class Game extends React.Component<{}, GameState> {
     return (
       <div className="game">
         <div className="game-board">
-          <Board />
+          <Board
+            squares={current.squares}
+            value={this.props.squares[i]}
+            squareClickEvent={i => this.props.squareClickEvent(i)}
+          />
         </div>
         <div className="game-info">
           <div>{status}</div>

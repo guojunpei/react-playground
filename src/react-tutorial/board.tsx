@@ -1,35 +1,18 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
-import { findWinner } from './rules';
 import { Square } from './square';
 
-export interface BoardState {
+interface BoardProps{
+  value: number |"X"|"O";
+  squareClickEvent: (e: number |"X"|"O" | null) => void;
   squares: ( `X` | `O` )[];
-  xIsNext: boolean;
 }
-export class Board extends React.Component<{}, BoardState> {
-  handleClick(i: number){
-    const squares =this.state.squares.slice();
-    
-    if(findWinner(squares) || squares[i]){
-      return;
-    }
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
-    this.setState({
-      squares: squares,
-      xIsNext: !this.state.xIsNext,
-    });
-  }
-
+export class Board extends React.Component<BoardProps, {}> {
   renderSquare = (i: number) => {
-    const { squares } = this.state;
     return (
       <Square
-        value={squares[i]}
-        squareClickEvent={(squareNr) => {
-          if (squareNr === null)
-            this.handleClick(i)
-        }}
+        value={this.props.squares[i]}
+        squareClickEvent={() => this.props.squareClickEvent(i)}
       />
     );
   };
