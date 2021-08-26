@@ -3,7 +3,6 @@ import React from 'react';
 import { Board } from './board';
 import './game.scss';
 import { findWinner } from './rules';
-//import { Square } from './square';
 export interface GameProps {
   squares: ( `X` | `O` )[];
   stepNumber: number;
@@ -78,8 +77,7 @@ export class Game extends React.Component<{}, GameProps> {
         <div className="game-board">
           <Board
             squares={current.squares}
-            value={this.props.squares[i]}
-            squareClickEvent={i => this.props.squareClickEvent(i)}
+            squareClickEvent={i  => this.handleClick(i)}
           />
         </div>
         <div className="game-info">

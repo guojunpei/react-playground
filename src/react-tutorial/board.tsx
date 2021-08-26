@@ -3,7 +3,6 @@ import React from 'react';
 import { Square } from './square';
 
 interface BoardProps{
-  value: number |"X"|"O";
   squareClickEvent: (e: number |"X"|"O" | null) => void;
   squares: ( `X` | `O` )[];
 }
