@@ -1,10 +1,9 @@
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Square } from './square';
 
-interface BoardProps{
+interface BoardProps {
   squareClickEvent: (e: number) => void;
-  squares: ( `X` | `O` )[];
+  squares: (`X` | `O`)[];
 }
 export class Board extends React.Component<BoardProps, {}> {
   renderSquare = (i: number) => {
@@ -39,4 +38,3 @@ export class Board extends React.Component<BoardProps, {}> {
     );
   }
 }
-
