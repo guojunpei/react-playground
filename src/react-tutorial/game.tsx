@@ -65,7 +65,7 @@ export class Game extends React.Component<{}, GameProps> {
       );
     });
 
-    let status;
+    let status: string = '';
     if (winner) {
       status = `Winner: ${winner}`;
     } else {
