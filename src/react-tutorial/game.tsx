@@ -4,7 +4,6 @@ import './game.scss';
 import { findWinner } from './rules';
 
 export interface GameProps {
-  squares: (`X` | `O`)[];
   stepNumber: number;
   xIsNext: boolean;
   history: { squares: (`X` | `O`)[] }[];
@@ -14,7 +13,6 @@ export class Game extends React.Component<{}, GameProps> {
   constructor(props: GameProps) {
     super(props);
     this.state = {
-      squares: [],
       stepNumber: 0,
       history: [
         {
@@ -59,7 +57,7 @@ export class Game extends React.Component<{}, GameProps> {
     const moves = history.map((step, move) => {
       const desc = move ? `Go to move #${move}` : 'Go to game start';
       return (
-        <li key={move}>
+        <li>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       );
