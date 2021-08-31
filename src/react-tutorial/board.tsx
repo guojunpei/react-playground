@@ -7,11 +7,10 @@ interface BoardProps {
 }
 export class Board extends React.Component<BoardProps, {}> {
   renderSquare = (i: number) => {
+    const { squares } = this.props;
+    const { squareClickEvent } = this.props;
     return (
-      <Square
-        value={this.props.squares[i]}
-        squareClickEvent={() => this.props.squareClickEvent(i)}
-      />
+      <Square value={squares[i]} squareClickEvent={() => squareClickEvent(i)} />
     );
   };
 
