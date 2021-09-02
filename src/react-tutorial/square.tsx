@@ -4,7 +4,7 @@ export interface SquareProps {
   value: number | 'X' | 'O';
   squareClickEvent: (e: number | 'X' | 'O' | null) => void;
 }
-export class Square extends React.Component<SquareProps, {}> {
+export class Square extends React.PureComponent<SquareProps, {}> {
   render() {
     const { value, squareClickEvent } = this.props;
     return (
