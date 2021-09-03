@@ -1,6 +1,6 @@
 import React from 'react';
 import { Square } from './square';
-
+import status from '';
 interface BoardProps {
   squareClickEvent: (e: number) => void;
   squares: (`X` | `O`)[];
