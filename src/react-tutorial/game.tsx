@@ -24,24 +24,24 @@ export class Game extends React.Component<{}, GameProps> {
   }
 
   handleClick(i: number) {
-    const { history } = this.state;
-    const { stepNumber } = this.state;
-    const { xIsNext } = this.state;
-    const historys = history.slice(0, stepNumber + 1);
+    const { history, xIsNext } = this.state;
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (findWinner(squares) || squares[i]) {
       return;
     }
     squares[i] = xIsNext ? `X` : `O`;
-    this.setState({
-      history: historys.concat([
-        {
-          squares,
-        },
-      ]),
-      stepNumber: historys.length,
-      xIsNext: !xIsNext,
+    this.setState(({ stepNumber }) => {
+      const historys = history.slice(0, stepNumber + 1);
+      return {
+        history: historys.concat([
+          {
+            squares,
+          },
+        ]),
+        stepNumber: historys.length,
+        xIsNext: !xIsNext,
+      };
     });
   }
 
@@ -53,11 +53,9 @@ export class Game extends React.Component<{}, GameProps> {
   }
 
   render() {
-    const { history } = this.state;
-    const { stepNumber } = this.state;
+    const { history, stepNumber, xIsNext } = this.state;
     const current = history[stepNumber];
     const winner = findWinner(current.squares);
-    const { xIsNext } = this.state;
 
     const moves = history.map((step, move) => {
       const desc = move ? `Go to move #${move}` : 'Go to game start';
