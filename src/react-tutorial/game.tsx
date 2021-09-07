@@ -31,17 +31,14 @@ export class Game extends React.Component<{}, GameProps> {
       return;
     }
     squares[i] = xIsNext ? `X` : `O`;
-    this.setState(({ stepNumber }) => {
-      const historys = history.slice(0, stepNumber + 1);
-      return {
-        history: historys.concat([
-          {
-            squares,
-          },
-        ]),
-        stepNumber: historys.length,
-        xIsNext: !xIsNext,
-      };
+    this.setState({
+      history: history.concat([
+        {
+          squares,
+        },
+      ]),
+      stepNumber: history.length,
+      xIsNext: !xIsNext,
     });
   }
 
@@ -60,7 +57,7 @@ export class Game extends React.Component<{}, GameProps> {
     const moves = history.map((step, move) => {
       const desc = move ? `Go to move #${move}` : 'Go to game start';
       return (
-        <li>
+        <li key={step.squares[move]}>
           <button type="button" onClick={() => this.jumpTo(move)}>
             {desc}
           </button>

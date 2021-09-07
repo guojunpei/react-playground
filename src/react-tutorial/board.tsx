@@ -17,8 +17,6 @@ export class Board extends React.Component<BoardProps, {}> {
   render() {
     return (
       <div>
-        {/* todo: where is status come from */}
-        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
