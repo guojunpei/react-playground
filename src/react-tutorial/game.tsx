@@ -24,8 +24,9 @@ export class Game extends React.Component<{}, GameProps> {
   }
 
   handleClick(i: number) {
-    const { history, xIsNext } = this.state;
-    const current = history[history.length - 1];
+    const { history, xIsNext, stepNumber } = this.state;
+    const historys = history.slice(0, stepNumber + 1);
+    const current = historys[historys.length - 1];
     const squares = current.squares.slice();
     if (findWinner(squares) || squares[i]) {
       return;
@@ -53,7 +54,6 @@ export class Game extends React.Component<{}, GameProps> {
     const { history, stepNumber, xIsNext } = this.state;
     const current = history[stepNumber];
     const winner = findWinner(current.squares);
-
     const moves = history.map((step, move) => {
       const desc = move ? `Go to move #${move}` : 'Go to game start';
       return (
