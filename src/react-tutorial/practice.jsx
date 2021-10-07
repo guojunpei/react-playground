@@ -190,3 +190,57 @@ ReactDOM.render(
   <Clock />,
   document.getElementById('root')
 );
+
+function Form() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log('You clicked submit.');
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Toggle />,
+  document.getElementById('root')
+);
+
+class LoggingButton extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return (
+      <button onClick={() => this.handleClick()}>
+        Click me
+      </button>
+    );
+  }
+}
