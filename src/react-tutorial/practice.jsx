@@ -245,6 +245,22 @@ class LoggingButton extends React.Component {
   }
 }
 
+
+function LoginButton(props) {
+  return (
+    <button onClick={props.onClick}>
+      Login
+    </button>
+  );
+}
+
+function LogoutButton(props) {
+  return (
+    <button onClick={props.onClick}>
+      Logout
+    </button>
+  );
+}
 class LoginControl extends React.Component {
   constructor(props) {
     super(props);
