@@ -1,6 +1,6 @@
+/*eslint-disable*/
 //
 //ReactDOM.render(<h1>hello,word!</h1>, document.getElementById('root'));
-
 class welcome extends React.Component{
     render(){
         return <h1>hello,{this.props.name}</h1>
@@ -1005,7 +1005,7 @@ class Mouse extends React.Component {
     return (
       <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
 
-        {/*todo*/}
+        {/todo/}
         <p>The current mouse position is ({this.state.x}, {this.state.y})</p>
       </div>
     );

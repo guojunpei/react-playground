@@ -22,4 +22,8 @@ export const appPages: AppPageType[] = [
     component: <Game />,
     path: '/game',
   },
+  {
+    component: <Caculator />,
+    path: '/caculator',
+  },
 ];
