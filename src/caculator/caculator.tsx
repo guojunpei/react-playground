@@ -25,7 +25,7 @@ export class Caculator extends React.Component<{}, TypeSave> {
     return (
       <div id="main">
         <div id="type-show">
-          <input value={this.state.typeContent} />
+          <input value={this.state.} />
         </div>
         <div id="type-board">
           <div className="board-row">
