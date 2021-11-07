@@ -1,61 +1,57 @@
 /*eslint-disable*/
 //
 //ReactDOM.render(<h1>hello,word!</h1>, document.getElementById('root'));
-class welcome extends React.Component{
-    render(){
-        return <h1>hello,{this.props.name}</h1>
-    }
+class welcome extends React.Component {
+  render() {
+    return <h1>hello,{this.props.name}</h1>;
+  }
 }
 
 function getGreeting(user) {
-    if (user) {
-      return <h1>Hello, {formatName(user)}!</h1>;
-    }
-    return <h1>Hello, Stranger.</h1>;
+  if (user) {
+    return <h1>Hello, {formatName(user)}!</h1>;
   }
+  return <h1>Hello, Stranger.</h1>;
+}
 
 const element = <div tabIndex="0"></div>;
 
 const element = <img src={user.avatarUrl}></img>;
 const element = <img src={user.avatarUrl} />;
 
-const element = (
-    <h1 className="greeting">
-      Hello, world!
-    </h1>
-  );
+const element = <h1 className="greeting">Hello, world!</h1>;
 
 const element = React.createElement(
   'h1',
-  {className: 'greeting'},
-  'Hello, world!'
+  { className: 'greeting' },
+  'Hello, world!',
 );
 
 const element = {
-    type: 'h1',
-    props: {
-      className: 'greeting',
-      children: 'Hello, world!'
-    }
-  };
+  type: 'h1',
+  props: {
+    className: 'greeting',
+    children: 'Hello, world!',
+  },
+};
 
-<div id="root"></div>
+<div id="root"></div>;
 
 const element = <h1>Hello, world</h1>;
 ReactDOM.render(element, document.getElementById('root'));
 
 function tick() {
-    const element = (
-      <div>
-        <h1>Hello, world!</h1>
-        <h2>It is {new Date().toLocaleTimeString()}.</h2>
-      </div>
-    );
-    ReactDOM.render(element, document.getElementById('root'));
-  }
-  
-  setInterval(tick, 1000);
-  
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('root'));
+}
+
+setInterval(tick, 1000);
+
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -71,10 +67,7 @@ function Welcome(props) {
 }
 
 const element = <Welcome name="Sara" />;
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+ReactDOM.render(element, document.getElementById('root'));
 
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
@@ -90,39 +83,28 @@ function App() {
   );
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
 
 function Comment(props) {
   return (
     <div className="Comment">
       <div className="UserInfo">
-        <img className="Avatar"
+        <img
+          className="Avatar"
           src={props.author.avatarUrl}
           alt={props.author.name}
         />
-        <div className="UserInfo-name">
-          {props.author.name}
-        </div>
+        <div className="UserInfo-name">{props.author.name}</div>
       </div>
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
+      <div className="Comment-text">{props.text}</div>
+      <div className="Comment-date">{formatDate(props.date)}</div>
     </div>
   );
 }
 
 function Avatar(props) {
   return (
-    <img className="Avatar"
-      src={props.user.avatarUrl}
-      alt={props.user.name}
-    />
+    <img className="Avatar" src={props.user.avatarUrl} alt={props.user.name} />
   );
 }
 
@@ -131,16 +113,10 @@ function Comment(props) {
     <div className="Comment">
       <div className="UserInfo">
         <Avatar user={props.author} />
-        <div className="UserInfo-name">
-          {props.author.name}
-        </div>
+        <div className="UserInfo-name">{props.author.name}</div>
       </div>
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
+      <div className="Comment-text">{props.text}</div>
+      <div className="Comment-date">{formatDate(props.date)}</div>
     </div>
   );
 }
@@ -149,9 +125,7 @@ function UserInfo(props) {
   return (
     <div className="UserInfo">
       <Avatar user={props.user} />
-      <div className="UserInfo-name">
-        {props.user.name}
-      </div>
+      <div className="UserInfo-name">{props.user.name}</div>
     </div>
   );
 }
@@ -160,16 +134,11 @@ function Comment(props) {
   return (
     <div className="Comment">
       <UserInfo user={props.author} />
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
+      <div className="Comment-text">{props.text}</div>
+      <div className="Comment-date">{formatDate(props.date)}</div>
     </div>
   );
 }
-
 
 function Clock(props) {
   return (
@@ -181,10 +150,7 @@ function Clock(props) {
 }
 
 function tick() {
-  ReactDOM.render(
-    <Clock date={new Date()} />,
-    document.getElementById('root')
-  );
+  ReactDOM.render(<Clock date={new Date()} />, document.getElementById('root'));
 }
 
 setInterval(tick, 1000);
@@ -192,7 +158,7 @@ setInterval(tick, 1000);
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = { date: new Date() };
   }
 
   render() {
@@ -205,10 +171,7 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Clock />, document.getElementById('root'));
 
 function Form() {
   function handleSubmit(e) {
@@ -226,13 +189,13 @@ function Form() {
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
+    this.state = { isToggleOn: true };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
+    this.setState((prevState) => ({
+      isToggleOn: !prevState.isToggleOn,
     }));
   }
 
@@ -245,10 +208,7 @@ class Toggle extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Toggle />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Toggle />, document.getElementById('root'));
 
 class LoggingButton extends React.Component {
   handleClick() {
@@ -256,44 +216,31 @@ class LoggingButton extends React.Component {
   }
 
   render() {
-    return (
-      <button onClick={() => this.handleClick()}>
-        Click me
-      </button>
-    );
+    return <button onClick={() => this.handleClick()}>Click me</button>;
   }
 }
 
-
 function LoginButton(props) {
-  return (
-    <button onClick={props.onClick}>
-      Login
-    </button>
-  );
+  return <button onClick={props.onClick}>Login</button>;
 }
 
 function LogoutButton(props) {
-  return (
-    <button onClick={props.onClick}>
-      Logout
-    </button>
-  );
+  return <button onClick={props.onClick}>Logout</button>;
 }
 class LoginControl extends React.Component {
   constructor(props) {
     super(props);
     this.handleLoginClick = this.handleLoginClick.bind(this);
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
-    this.state = {isLoggedIn: false};
+    this.state = { isLoggedIn: false };
   }
 
   handleLoginClick() {
-    this.setState({isLoggedIn: true});
+    this.setState({ isLoggedIn: true });
   }
 
   handleLogoutClick() {
-    this.setState({isLoggedIn: false});
+    this.setState({ isLoggedIn: false });
   }
 
   render() {
@@ -314,21 +261,16 @@ class LoginControl extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <LoginControl />,
-  document.getElementById('root')
-);
+ReactDOM.render(<LoginControl />, document.getElementById('root'));
 
 function Mailbox(props) {
   const unreadMessages = props.unreadMessages;
   return (
     <div>
       <h1>Hello!</h1>
-      {unreadMessages.length > 0 &&
-        <h2>
-          You have {unreadMessages.length} unread messages.
-        </h2>
-      }
+      {unreadMessages.length > 0 && (
+        <h2>You have {unreadMessages.length} unread messages.</h2>
+      )}
     </div>
   );
 }
@@ -336,7 +278,7 @@ function Mailbox(props) {
 const messages = ['React', 'Re: React', 'Re:Re: React'];
 ReactDOM.render(
   <Mailbox unreadMessages={messages} />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 function WarningBanner(props) {
@@ -344,23 +286,19 @@ function WarningBanner(props) {
     return null;
   }
 
-  return (
-    <div className="warning">
-      Warning!
-    </div>
-  );
+  return <div className="warning">Warning!</div>;
 }
 
 class Page extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {showWarning: true};
+    this.state = { showWarning: true };
     this.handleToggleClick = this.handleToggleClick.bind(this);
   }
 
   handleToggleClick() {
-    this.setState(state => ({
-      showWarning: !state.showWarning
+    this.setState((state) => ({
+      showWarning: !state.showWarning,
     }));
   }
 
@@ -376,27 +314,20 @@ class Page extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Page />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Page />, document.getElementById('root'));
 
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map((number) =>
-    <li key={number.toString()}>
-      {number}
-    </li>
-  );
-  return (
-    <ul>{listItems}</ul>
-  );
+  const listItems = numbers.map((number) => (
+    <li key={number.toString()}>{number}</li>
+  ));
+  return <ul>{listItems}</ul>;
 }
 
 const numbers = [1, 2, 3, 4, 5];
 ReactDOM.render(
   <NumberList numbers={numbers} />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 function ListItem(props) {
@@ -405,38 +336,32 @@ function ListItem(props) {
 
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map((number) =>
+  const listItems = numbers.map((number) => (
     <ListItem key={number.toString()} value={number} />
-  );
-  return (
-    <ul>
-      {listItems}
-    </ul>
-  );
+  ));
+  return <ul>{listItems}</ul>;
 }
 
 const numbers = [1, 2, 3, 4, 5];
 ReactDOM.render(
   <NumberList numbers={numbers} />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 function Blog(props) {
   const sidebar = (
     <ul>
-      {props.posts.map((post) =>
-        <li key={post.id}>
-          {post.title}
-        </li>
-      )}
+      {props.posts.map((post) => (
+        <li key={post.id}>{post.title}</li>
+      ))}
     </ul>
   );
-  const content = props.posts.map((post) =>
+  const content = props.posts.map((post) => (
     <div key={post.id}>
       <h3>{post.title}</h3>
       <p>{post.content}</p>
     </div>
-  );
+  ));
   return (
     <div>
       {sidebar}
@@ -447,26 +372,22 @@ function Blog(props) {
 }
 
 const posts = [
-  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+  { id: 1, title: 'Hello World', content: 'Welcome to learning React!' },
+  { id: 2, title: 'Installation', content: 'You can install React from npm.' },
 ];
-ReactDOM.render(
-  <Blog posts={posts} />,
-  document.getElementById('root')
-);
-
+ReactDOM.render(<Blog posts={posts} />, document.getElementById('root'));
 
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = { value: '' };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
@@ -479,7 +400,11 @@ class NameForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           名字:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
         </label>
         <input type="submit" value="提交" />
       </form>
@@ -491,7 +416,7 @@ class EssayForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '请撰写一篇关于你喜欢的 DOM 元素的文章.'
+      value: '请撰写一篇关于你喜欢的 DOM 元素的文章.',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -499,7 +424,7 @@ class EssayForm extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
@@ -520,18 +445,17 @@ class EssayForm extends React.Component {
   }
 }
 
-
 class FlavorForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: 'coconut'};
+    this.state = { value: 'coconut' };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
@@ -562,7 +486,7 @@ class Reservation extends React.Component {
     super(props);
     this.state = {
       isGoing: true,
-      numberOfGuests: 2
+      numberOfGuests: 2,
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -574,7 +498,7 @@ class Reservation extends React.Component {
     const name = target.name;
 
     this.setState({
-      [name]: value
+      [name]: value,
     });
   }
 
@@ -587,7 +511,8 @@ class Reservation extends React.Component {
             name="isGoing"
             type="checkbox"
             checked={this.state.isGoing}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
         <br />
         <label>
@@ -596,7 +521,8 @@ class Reservation extends React.Component {
             name="numberOfGuests"
             type="number"
             value={this.state.numberOfGuests}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
       </form>
     );
@@ -614,11 +540,11 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-    this.state = {temperature: ''};
+    this.state = { temperature: '' };
   }
 
   handleChange(e) {
-    this.setState({temperature: e.target.value});
+    this.setState({ temperature: e.target.value });
   }
 
   render() {
@@ -626,11 +552,8 @@ class Calculator extends React.Component {
     return (
       <fieldset>
         <legend>Enter temperature in Celsius:</legend>
-        <input
-          value={temperature}
-          onChange={this.handleChange} />
-        <BoilingVerdict
-          celsius={parseFloat(temperature)} />
+        <input value={temperature} onChange={this.handleChange} />
+        <BoilingVerdict celsius={parseFloat(temperature)} />
       </fieldset>
     );
   }
@@ -638,18 +561,18 @@ class Calculator extends React.Component {
 
 const scaleNames = {
   c: 'Celsius',
-  f: 'Fahrenheit'
+  f: 'Fahrenheit',
 };
 
 class TemperatureInput extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-    this.state = {temperature: ''};
+    this.state = { temperature: '' };
   }
 
   handleChange(e) {
-    this.setState({temperature: e.target.value});
+    this.setState({ temperature: e.target.value });
   }
 
   render() {
@@ -658,8 +581,7 @@ class TemperatureInput extends React.Component {
     return (
       <fieldset>
         <legend>Enter temperature in {scaleNames[scale]}:</legend>
-        <input value={temperature}
-               onChange={this.handleChange} />
+        <input value={temperature} onChange={this.handleChange} />
       </fieldset>
     );
   }
@@ -670,35 +592,38 @@ class Calculator extends React.Component {
     super(props);
     this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
     this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
-    this.state = {temperature: '', scale: 'c'};
+    this.state = { temperature: '', scale: 'c' };
   }
 
   handleCelsiusChange(temperature) {
-    this.setState({scale: 'c', temperature});
+    this.setState({ scale: 'c', temperature });
   }
 
   handleFahrenheitChange(temperature) {
-    this.setState({scale: 'f', temperature});
+    this.setState({ scale: 'f', temperature });
   }
 
   render() {
     const scale = this.state.scale;
     const temperature = this.state.temperature;
-    const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
-    const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+    const celsius =
+      scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
+    const fahrenheit =
+      scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
 
     return (
       <div>
         <TemperatureInput
           scale="c"
           temperature={celsius}
-          onTemperatureChange={this.handleCelsiusChange} />
+          onTemperatureChange={this.handleCelsiusChange}
+        />
         <TemperatureInput
           scale="f"
           temperature={fahrenheit}
-          onTemperatureChange={this.handleFahrenheitChange} />
-        <BoilingVerdict
-          celsius={parseFloat(celsius)} />
+          onTemperatureChange={this.handleFahrenheitChange}
+        />
+        <BoilingVerdict celsius={parseFloat(celsius)} />
       </div>
     );
   }
@@ -715,45 +640,27 @@ function FancyBorder(props) {
 function SplitPane(props) {
   return (
     <div className="SplitPane">
-      <div className="SplitPane-left">
-        {props.left}
-      </div>
-      <div className="SplitPane-right">
-        {props.right}
-      </div>
+      <div className="SplitPane-left">{props.left}</div>
+      <div className="SplitPane-right">{props.right}</div>
     </div>
   );
 }
 
 function App() {
-  return (
-    <SplitPane
-      left={
-        <Contacts />
-      }
-      right={
-        <Chat />
-      } />
-  );
+  return <SplitPane left={<Contacts />} right={<Chat />} />;
 }
 
 function WelcomeDialog() {
   return (
-    <Dialog
-      title="Welcome"
-      message="Thank you for visiting our spacecraft!" />
+    <Dialog title="Welcome" message="Thank you for visiting our spacecraft!" />
   );
 }
 
 function Dialog(props) {
   return (
     <FancyBorder color="blue">
-      <h1 className="Dialog-title">
-        {props.title}
-      </h1>
-      <p className="Dialog-message">
-        {props.message}
-      </p>
+      <h1 className="Dialog-title">{props.title}</h1>
+      <p className="Dialog-message">{props.message}</p>
       {props.children}
     </FancyBorder>
   );
@@ -764,24 +671,23 @@ class SignUpDialog extends React.Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSignUp = this.handleSignUp.bind(this);
-    this.state = {login: ''};
+    this.state = { login: '' };
   }
 
   render() {
     return (
-      <Dialog title="Mars Exploration Program"
-              message="How should we refer to you?">
-        <input value={this.state.login}
-               onChange={this.handleChange} />
-        <button onClick={this.handleSignUp}>
-          Sign Me Up!
-        </button>
+      <Dialog
+        title="Mars Exploration Program"
+        message="How should we refer to you?"
+      >
+        <input value={this.state.login} onChange={this.handleChange} />
+        <button onClick={this.handleSignUp}>Sign Me Up!</button>
       </Dialog>
     );
   }
 
   handleChange(e) {
-    this.setState({login: e.target.value});
+    this.setState({ login: e.target.value });
   }
 
   handleSignUp() {
@@ -789,15 +695,12 @@ class SignUpDialog extends React.Component {
   }
 }
 
-
 class ProductCategoryRow extends React.Component {
   render() {
     const category = this.props.category;
     return (
       <tr>
-        <th colSpan="2">
-          {category}
-        </th>
+        <th colSpan="2">{category}</th>
       </tr>
     );
   }
@@ -806,11 +709,11 @@ class ProductCategoryRow extends React.Component {
 class ProductRow extends React.Component {
   render() {
     const product = this.props.product;
-    const name = product.stocked ?
-      product.name :
-      <span style={{color: 'red'}}>
-        {product.name}
-      </span>;
+    const name = product.stocked ? (
+      product.name
+    ) : (
+      <span style={{ color: 'red' }}>{product.name}</span>
+    );
 
     return (
       <tr>
@@ -840,15 +743,11 @@ class ProductTable extends React.Component {
         rows.push(
           <ProductCategoryRow
             category={product.category}
-            key={product.category} />
+            key={product.category}
+          />,
         );
       }
-      rows.push(
-        <ProductRow
-          product={product}
-          key={product.name}
-        />
-      );
+      rows.push(<ProductRow product={product} key={product.name} />);
       lastCategory = product.category;
     });
 
@@ -872,15 +771,15 @@ class SearchBar extends React.Component {
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleInStockChange = this.handleInStockChange.bind(this);
   }
-  
+
   handleFilterTextChange(e) {
     this.props.onFilterTextChange(e.target.value);
   }
-  
+
   handleInStockChange(e) {
     this.props.onInStockChange(e.target.checked);
   }
-  
+
   render() {
     return (
       <form>
@@ -895,8 +794,7 @@ class SearchBar extends React.Component {
             type="checkbox"
             checked={this.props.inStockOnly}
             onChange={this.handleInStockChange}
-          />
-          {' '}
+          />{' '}
           Only show products in stock
         </p>
       </form>
@@ -909,23 +807,23 @@ class FilterableProductTable extends React.Component {
     super(props);
     this.state = {
       filterText: '',
-      inStockOnly: false
+      inStockOnly: false,
     };
-    
+
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleInStockChange = this.handleInStockChange.bind(this);
   }
 
   handleFilterTextChange(filterText) {
     this.setState({
-      filterText: filterText
+      filterText: filterText,
     });
   }
-  
+
   handleInStockChange(inStockOnly) {
     this.setState({
-      inStockOnly: inStockOnly
-    })
+      inStockOnly: inStockOnly,
+    });
   }
 
   render() {
@@ -947,21 +845,44 @@ class FilterableProductTable extends React.Component {
   }
 }
 
-
 const PRODUCTS = [
-  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
-  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
-  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
-  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
-  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
-  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+  {
+    category: 'Sporting Goods',
+    price: '$49.99',
+    stocked: true,
+    name: 'Football',
+  },
+  {
+    category: 'Sporting Goods',
+    price: '$9.99',
+    stocked: true,
+    name: 'Baseball',
+  },
+  {
+    category: 'Sporting Goods',
+    price: '$29.99',
+    stocked: false,
+    name: 'Basketball',
+  },
+  {
+    category: 'Electronics',
+    price: '$99.99',
+    stocked: true,
+    name: 'iPod Touch',
+  },
+  {
+    category: 'Electronics',
+    price: '$399.99',
+    stocked: false,
+    name: 'iPhone 5',
+  },
+  { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' },
 ];
 
 ReactDOM.render(
   <FilterableProductTable products={PRODUCTS} />,
-  document.getElementById('container')
+  document.getElementById('container'),
 );
-
 
 class MouseTracker extends React.Component {
   constructor(props) {
@@ -973,7 +894,7 @@ class MouseTracker extends React.Component {
   handleMouseMove(event) {
     this.setState({
       x: event.clientX,
-      y: event.clientY
+      y: event.clientY,
     });
   }
 
@@ -981,7 +902,9 @@ class MouseTracker extends React.Component {
     return (
       <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
         <h1>移动鼠标!</h1>
-        <p>当前的鼠标位置是 ({this.state.x}, {this.state.y})</p>
+        <p>
+          当前的鼠标位置是 ({this.state.x}, {this.state.y})
+        </p>
       </div>
     );
   }
@@ -997,16 +920,17 @@ class Mouse extends React.Component {
   handleMouseMove(event) {
     this.setState({
       x: event.clientX,
-      y: event.clientY
+      y: event.clientY,
     });
   }
 
   render() {
     return (
       <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
-
         {/todo/}
-        <p>The current mouse position is ({this.state.x}, {this.state.y})</p>
+        <p>
+          The current mouse position is ({this.state.x}, {this.state.y})
+        </p>
       </div>
     );
   }
@@ -1022,7 +946,6 @@ class MouseTracker extends React.Component {
     );
   }
 }
-
 
 class OuterClickExample extends React.Component {
   constructor(props) {
@@ -1044,13 +967,16 @@ class OuterClickExample extends React.Component {
   }
 
   onClickHandler() {
-    this.setState(currentState => ({
-      isOpen: !currentState.isOpen
+    this.setState((currentState) => ({
+      isOpen: !currentState.isOpen,
     }));
   }
 
   onClickOutsideHandler(event) {
-    if (this.state.isOpen && !this.toggleContainer.current.contains(event.target)) {
+    if (
+      this.state.isOpen &&
+      !this.toggleContainer.current.contains(event.target)
+    ) {
       this.setState({ isOpen: false });
     }
   }

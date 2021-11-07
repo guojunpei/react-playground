@@ -2,5 +2,5 @@ export const appRouterPaths = [
   '/',
   '/responsive-svg',
   '/game',
-  '/caculator',
+  '/calculator2',
 ] as const;

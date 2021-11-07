@@ -1,4 +1,5 @@
 import React from 'react';
+import { Calculator as CalculatorV2 } from '../calculator/v2/calculator';
 import { Home } from '../home/home';
 import { Game } from '../react-tutorial/game';
 import { ResponsiveSvg } from '../responsive-svg/responsive-svg';
@@ -23,7 +24,7 @@ export const appPages: AppPageType[] = [
     path: '/game',
   },
   {
-    component: <Caculator />,
-    path: '/caculator',
+    component: <CalculatorV2 />,
+    path: '/calculator2',
   },
 ];
