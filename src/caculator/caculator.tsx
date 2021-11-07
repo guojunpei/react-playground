@@ -9,21 +9,22 @@ export class Caculator extends React.Component<{}, TypeSave> {
     this.state = {
       typeContent: '0',
     };
+    this.handleType = this.handleType.bind(this);
   }
 
   handleType(i: string) {
-    const typeContent = this.props;
+    const typeContent = this.state;
     this.setState({
       typeContent: typeContent + i,
     });
   }
 
   renderButton = (i: string) => {
-    return <div>{i}</div>;
+    return <div onClick={this.props.handleType(i)}>{i}</div>;
   };
 
   render() {
-    const typeContent = this.props;
+    const typeContent = this.state;
     return (
       <div id="main">
         <div id="type-show">
