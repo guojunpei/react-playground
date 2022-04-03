@@ -35,11 +35,13 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
     };
 
     const btnClickEventHandler = (name: CalculatorBtnNameType) => {
+      //清屏
       if (isClear(name)) {
         clearState();
         return;
       }
 
+      //没有点击计算键，且点击的是数字：数字存到state.x上
       if (!operation && isNameNumber(name)) {
         const value = `${x || ''}${name}`;
         this.setState(() => ({
@@ -49,6 +51,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
         return;
       }
 
+      //点击过计算键，state.x有值，且被点击的是数字：数字存到state.y上
       if (operation && x && isNameNumber(name)) {
         const value = `${y || ''}${name}`;
         this.setState(() => ({
@@ -58,7 +61,9 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
         return;
       }
 
+      //计算键被点击：
       if (calOperations.some((o) => o === name)) {
+        //
         if (!operation) {
           this.setState(() => ({
             operation: name,
@@ -66,6 +71,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
           return;
         }
 
+        //
         if (operation && x && y) {
           const r = compute(
             Number.parseFloat(x),
