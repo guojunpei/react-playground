@@ -21,6 +21,22 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
 
   render() {
     const { x, y, operation, result } = this.state;
+
+    const isCalculate = (name: CalculatorBtnNameType) => {
+      //state.operation、state.x、state.y都有值：运行计算并将计算结果存到state.x上，并清空y
+      if (operation && x && y) {
+        const r = compute(
+          Number.parseFloat(x),
+          operation,
+          Number.parseFloat(y),
+        );
+        this.setState(() => ({
+          result: r,
+          x: r.toString(),
+          y: undefined,
+        }));
+      }
+    }
     // improve this
     const isClear = (name: CalculatorBtnNameType) =>
       ['AC', '+/-', '%'].some((c) => c === name);
@@ -41,7 +57,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
         return;
       }
 
-      //没有点击计算键，且点击的是数字：数字存到state.x上
+      //计算键没有被点击过，且点击的是数字：数字存到state.x上
       if (!operation && isNameNumber(name)) {
         const value = `${x || ''}${name}`;
         this.setState(() => ({
@@ -51,7 +67,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
         return;
       }
 
-      //点击过计算键，state.x有值，且被点击的是数字：数字存到state.y上
+      //计算键被点击过，state.x有值，且被点击的是数字：数字存到state.y上
       if (operation && x && isNameNumber(name)) {
         const value = `${y || ''}${name}`;
         this.setState(() => ({
@@ -63,7 +79,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
 
       //计算键被点击：
       if (calOperations.some((o) => o === name)) {
-        //
+        //state.operation为空，被点击的计算符号存到state.operation上
         if (!operation) {
           this.setState(() => ({
             operation: name,
@@ -71,19 +87,11 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
           return;
         }
 
-        //
-        if (operation && x && y) {
-          const r = compute(
-            Number.parseFloat(x),
-            operation,
-            Number.parseFloat(y),
-          );
-          this.setState(() => ({
-            result: r,
-            x: r.toString(),
-            y: undefined,
-          }));
-        }
+        isCalculate(name);
+      }
+
+      if ('=' === name) {
+        isCalculate(name);
       }
 
       // todo: not finished
