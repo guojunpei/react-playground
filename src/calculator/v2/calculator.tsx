@@ -22,7 +22,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
   render() {
     const { x, y, operation, result } = this.state;
 
-    const isCalculate = (name: CalculatorBtnNameType) => {
+    const isCalculate = () => {
       //state.operation、state.x、state.y都有值：运行计算并将计算结果存到state.x上，并清空y
       if (operation && x && y) {
         const r = compute(
@@ -87,11 +87,11 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
           return;
         }
 
-        isCalculate(name);
+        isCalculate();
       }
 
       if ('=' === name) {
-        isCalculate(name);
+        isCalculate();
       }
 
       // todo: not finished
@@ -100,9 +100,9 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
     return (
       <div className="calculator-v2">
         <CalculatorOutput output={result.toString()} />
-        <CalculatorInput clickEvent={btnClickEventHandler} />
+        <CalculatorInput clickEvent={btnClickEventHandler} operation={this.state.operation} />
       </div>
-      //<CalculatorInput clickEvent={btnClickEventHandler} CalculatorOperationType={this.state.operation} />
+      //<CalculatorInput clickEvent={btnClickEventHandler} />
     );
   }
 }

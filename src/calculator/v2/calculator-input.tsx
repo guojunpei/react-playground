@@ -1,22 +1,22 @@
 import React from 'react';
 import { CalculatorBtn } from './calculator-btn';
-import { ClickEventType } from './types/calculator-btn-props';
+import { ClickEventType, OperationType } from './types/calculator-btn-props';
 import { getCalculatorBtns } from './utils';
-import { CalculatorOperationType } from './types/calculator-btn-type'
 
 // eslint-disable-next-line react/prefer-stateless-function
-export class CalculatorInput extends React.Component<ClickEventType,CalculatorOperationType, {}> {
+export class CalculatorInput extends React.Component<ClickEventType,OperationType, {}> {
   render() {
-    const { clickEvent,CalculatorOperation} = this.props;
+    const { clickEvent, operation} = this.props;
     return (
       <div className="input">
         {getCalculatorBtns().map((b) => (
           <CalculatorBtn
             key={b.name}
             name={b.name}
-            classNames={b.classNames}
+            classNames={b.classNames=operation?b.classNames:"operation-active"}
+            //classNames={b.classNames}
             clickEvent={clickEvent}
-            CalculatorOperation={CalculatorOperation}
+
           />
         ))}
       </div>
