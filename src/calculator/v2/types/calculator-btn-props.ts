@@ -8,4 +8,4 @@ export interface ClickEventType {
   clickEvent: (name: CalculatorBtnNameType) => void;
 }
 
-export type CalculatorBtnProps = CalculatorBtnType & ClickEventType;
+export type CalculatorBtnProps = CalculatorBtnType & ClickEventType & CalculatorOperationType;
