@@ -7,7 +7,7 @@ import { CalculatorOperationType } from './types/calculator-btn-type'
 // eslint-disable-next-line react/prefer-stateless-function
 export class CalculatorInput extends React.Component<ClickEventType,CalculatorOperationType, {}> {
   render() {
-    const { clickEvent,} = this.props;
+    const { clickEvent,CalculatorOperation} = this.props;
     return (
       <div className="input">
         {getCalculatorBtns().map((b) => (
@@ -16,6 +16,7 @@ export class CalculatorInput extends React.Component<ClickEventType,CalculatorOp
             name={b.name}
             classNames={b.classNames}
             clickEvent={clickEvent}
+            CalculatorOperation={CalculatorOperation}
           />
         ))}
       </div>

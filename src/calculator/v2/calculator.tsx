@@ -102,6 +102,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
         <CalculatorOutput output={result.toString()} />
         <CalculatorInput clickEvent={btnClickEventHandler} />
       </div>
+      //<CalculatorInput clickEvent={btnClickEventHandler} CalculatorOperationType={this.state.operation} />
     );
   }
 }
