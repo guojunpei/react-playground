@@ -1,11 +1,15 @@
 import {
   CalculatorBtnNameType,
   CalculatorBtnType,
-  CalculatorOperationType,
+  CalculatorOperationType
 } from './calculator-btn-type';
 
 export interface ClickEventType {
   clickEvent: (name: CalculatorBtnNameType) => void;
 }
 
-export type CalculatorBtnProps = CalculatorBtnType & ClickEventType & CalculatorOperationType;
+export type CalculatorBtnProps = CalculatorBtnType & ClickEventType;
+
+export interface OperationType {
+  operation: CalculatorOperationType | undefined
+}

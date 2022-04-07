@@ -13,8 +13,7 @@ export class CalculatorInput extends React.Component<ClickEventType,OperationTyp
           <CalculatorBtn
             key={b.name}
             name={b.name}
-            classNames={b.classNames=operation?b.classNames:"operation-active"}
-            //classNames={b.classNames}
+            classNames={`${b.classNames}${operation === b.classNames ? "operation-active" : ""}`}
             clickEvent={clickEvent}
 
           />
