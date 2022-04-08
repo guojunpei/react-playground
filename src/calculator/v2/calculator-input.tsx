@@ -5,7 +5,9 @@ import { getCalculatorBtns } from './utils';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export class CalculatorInput extends React.Component<
-ClickEventType & OperationType, {}> {
+  ClickEventType & OperationType,
+  {}
+> {
   render() {
     const { clickEvent, operation } = this.props;
     return (
@@ -14,9 +16,10 @@ ClickEventType & OperationType, {}> {
           <CalculatorBtn
             key={b.name}
             name={b.name}
-            classNames={`${b.classNames}${operation === b.classNames ? "operation-active" : ""}`}
+            classNames={`${b.classNames}${
+              operation === b.classNames ? 'operation-active' : ''
+            }`}
             clickEvent={clickEvent}
-
           />
         ))}
       </div>
