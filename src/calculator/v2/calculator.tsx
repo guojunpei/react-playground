@@ -23,7 +23,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
     const { x, y, operation, result } = this.state;
 
     const isCalculate = () => {
-      //state.operation、state.x、state.y都有值：运行计算并将计算结果存到state.x上，并清空y
+      // state.operation、state.x、state.y都有值：运行计算并将计算结果存到state.x上，并清空y
       if (operation && x && y) {
         const r = compute(
           Number.parseFloat(x),
@@ -36,7 +36,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
           y: undefined,
         }));
       }
-    }
+    };
     // improve this
     const isClear = (name: CalculatorBtnNameType) =>
       ['AC', '+/-', '%'].some((c) => c === name);
@@ -51,13 +51,13 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
     };
 
     const btnClickEventHandler = (name: CalculatorBtnNameType) => {
-      //清屏
+      // 清屏
       if (isClear(name)) {
         clearState();
         return;
       }
 
-      //计算键没有被点击过，且点击的是数字：数字存到state.x上
+      // 计算键没有被点击过，且点击的是数字：数字存到state.x上
       if (!operation && isNameNumber(name)) {
         const value = `${x || ''}${name}`;
         this.setState(() => ({
@@ -67,7 +67,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
         return;
       }
 
-      //计算键被点击过，state.x有值，且被点击的是数字：数字存到state.y上
+      // 计算键被点击过，state.x有值，且被点击的是数字：数字存到state.y上
       if (operation && x && isNameNumber(name)) {
         const value = `${y || ''}${name}`;
         this.setState(() => ({
@@ -77,9 +77,9 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
         return;
       }
 
-      //计算键被点击：
+      // 计算键被点击：
       if (calOperations.some((o) => o === name)) {
-        //state.operation为空，被点击的计算符号存到state.operation上
+        // state.operation为空，被点击的计算符号存到state.operation上
         if (!operation) {
           this.setState(() => ({
             operation: name,
@@ -90,7 +90,7 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
         isCalculate();
       }
 
-      if ('=' === name) {
+      if (name === '=') {
         isCalculate();
       }
 
@@ -100,9 +100,12 @@ export class Calculator extends React.Component<{}, CalculatorStates> {
     return (
       <div className="calculator-v2">
         <CalculatorOutput output={result.toString()} />
-        <CalculatorInput clickEvent={btnClickEventHandler} operation={this.state.operation} />
+        <CalculatorInput
+          clickEvent={btnClickEventHandler}
+          operation={operation}
+        />
       </div>
-      //<CalculatorInput clickEvent={btnClickEventHandler} />
+      // <CalculatorInput clickEvent={btnClickEventHandler} />
     );
   }
 }

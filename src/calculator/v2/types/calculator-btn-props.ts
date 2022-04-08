@@ -1,7 +1,7 @@
 import {
   CalculatorBtnNameType,
   CalculatorBtnType,
-  CalculatorOperationType,
+  CalculatorOperationType
 } from './calculator-btn-type';
 
 export interface ClickEventType {
@@ -11,5 +11,5 @@ export interface ClickEventType {
 export type CalculatorBtnProps = CalculatorBtnType & ClickEventType;
 
 export interface OperationType {
-  operation: CalculatorOperationType | undefined;
+  operation: CalculatorOperationType | undefined
 }
