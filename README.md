@@ -1,3 +1,36 @@
+# joyingsoft.com
+
+## header
+### navbar
+### banner
+
+## content
+### content 1 : characteristic
+### content 2 : class funcation
+### content 3 : management funcation
+### content 4 : customer funcation
+### content 5 : other funcation
+### content 6 : connact us
+
+## footer
+
+
+# ketanghudong.com
+
+
+# guojunpei.com
+## home page
+## work
+### calculator
+### name-card
+### tic-tac-toe-game
+
+## photography
+## travel
+
+## CV
+
+
 # React Playground
 
 ## [React](https://reactjs.org/)
