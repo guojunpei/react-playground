@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { appRouterPaths } from '../app-constants';
-import './home.scss';
+import './home2.scss';
 
-export const Home: FC = () => {
+export const Home2: FC = () => {
   return (
-    <div className="home">
+    <div className="home2">
       <h1>React Playground</h1>
       <nav>
         <ul>
@@ -13,7 +13,7 @@ export const Home: FC = () => {
             <li key={p}>
               <Link to={p}>
                 {(p === '/'
-                  ? 'home'
+                  ? 'home2'
                   : ''
                 ).toUpperCase()}
               </Link>

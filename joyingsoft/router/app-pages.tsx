@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home } from '../home/home';
+import { Home2 } from '../home/home2';
 import { AppPageRouterPathType } from '../types/app-types';
 
 export interface AppPageType {
@@ -10,7 +10,7 @@ export interface AppPageType {
 
   export const appPages: AppPageType[] = [
     {
-      component: <Home />,
+      component: <Home2 />,
       path: '/',
     },
 
