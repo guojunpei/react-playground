@@ -4,4 +4,5 @@ export const appRouterPaths = [
   '/game',
   '/calculator2',
   '/calculator',
+  '/home2',
 ] as const;
