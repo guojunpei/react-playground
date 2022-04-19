@@ -21,6 +21,10 @@ export const Home2: FC = () => {
           ))}
         </ul>
       </nav>
+      <h1>about</h1>
+      <div> about content</div>
+      <h1>content 1</h1>
+      <div> content 1 content</div>
     </div>
   );
 };
