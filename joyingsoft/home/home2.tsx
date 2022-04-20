@@ -6,7 +6,21 @@ import './home2.scss';
 export const Home2: FC = () => {
   return (
     <div className="home2">
-      <h1>React Playground</h1>
+      <div id='main-header'>
+        <div>
+          <img src="" alt="乐软科技" />
+          <div>乐软</div>
+        </div>
+        <div>
+          <div>首页</div>
+          <div>服务</div>
+          <div>关于我们</div>
+          <div>产品</div>
+          <div>联系我们</div>
+          <div>EN</div>
+        </div>
+
+      </div>
       <nav>
         <ul>
           {appRouterPaths.map((p) => (

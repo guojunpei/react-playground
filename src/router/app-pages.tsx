@@ -5,7 +5,7 @@ import { Home } from '../home/home';
 import { Game } from '../react-tutorial/game';
 import { ResponsiveSvg } from '../responsive-svg/responsive-svg';
 import { AppPageRouterPathType } from '../types/app-types';
-import { Home2 } from '../../joyingsoft/home/home2'
+import { Home2 } from '../../joyingsoft/home/home2';
 
 export interface AppPageType {
   component: React.ReactElement;
