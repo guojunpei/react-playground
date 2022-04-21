@@ -4,5 +4,24 @@
     flex-direction: column;
     height: 100%;
     text-align: center;
+
+    .main-header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .left-header-wrap{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+      }
+
+      .right-header-wrap{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+      }
+    }
+
   }
   
