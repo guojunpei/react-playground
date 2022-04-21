@@ -4,12 +4,15 @@
     flex-direction: column;
     height: 100%;
     text-align: center;
+    width: 100%;
 
     .main-header{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       padding: 25px;
+      width: 80%;
+      align-self: center;
 
       .left-header-wrap{
         display: flex;
