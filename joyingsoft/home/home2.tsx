@@ -8,7 +8,9 @@ export const Home2: FC = () => {
     <div className="home2">
       <div className='main-header'>
         <div className='left-header-wrap'>
-          <img src="" alt="乐软科技" />
+          <div>
+            <img src="" alt="乐软科技" />
+          </div>
           <div>乐软</div>
         </div>
         <div className='right-header-wrap'>
