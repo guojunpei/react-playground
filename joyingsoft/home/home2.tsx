@@ -6,12 +6,12 @@ import './home2.scss';
 export const Home2: FC = () => {
   return (
     <div className="home2">
-      <div id='main-header'>
-        <div>
+      <div className='main-header'>
+        <div className='left-header-wrap'>
           <img src="" alt="乐软科技" />
           <div>乐软</div>
         </div>
-        <div>
+        <div className='right-header-wrap'>
           <div>首页</div>
           <div>服务</div>
           <div>关于我们</div>
