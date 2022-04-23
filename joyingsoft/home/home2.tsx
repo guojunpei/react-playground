@@ -22,10 +22,7 @@ export const Home2: FC = () => {
             <div>联系我们</div>
             <div>EN</div>
           </div>
-
         </div>
-
-
       </div>
       <nav>
         <ul>
