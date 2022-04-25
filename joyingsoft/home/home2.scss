@@ -1,9 +1,12 @@
+@import '../style/style-moudle.scss';
+
 .home2 {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   text-align: center;
+  background-color: $appColorBg;
 
   .main-header {
     background-color: darkslategray;
@@ -32,11 +35,16 @@
 
     .left-header-wrap>div {
       padding: 8px;
-      
+      &:hover{
+        color: $app;
+      }
     }
 
     .right-header-wrap>div {
       padding: 8px;
+      &:hover{
+        color: $appColorBtn;
+      }
     }
     }
   }
