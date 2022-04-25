@@ -9,6 +9,7 @@
     background-color: darkslategray;
     width: 100%;
     display: flex;
+    justify-content: center;
 
     .header-wrap {
       display: flex;
@@ -16,9 +17,6 @@
       justify-content: space-between;
       padding: 25px;
       width: 80%;
-      text-align: center;
-      align-content: center;
-      align-self: center;
 
     .left-header-wrap {
       display: flex;
@@ -34,6 +32,7 @@
 
     .left-header-wrap>div {
       padding: 8px;
+      
     }
 
     .right-header-wrap>div {
