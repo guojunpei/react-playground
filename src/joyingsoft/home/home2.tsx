@@ -6,15 +6,15 @@ import './home2.scss';
 export const Home2: FC = () => {
   return (
     <div className="home2">
-      <div className='main-header'>
-        <div className='header-wrap'>
-          <div className='left-header-wrap'>
+      <div className="main-header">
+        <div className="header-wrap">
+          <div className="left-header-wrap">
             <div>
               <img src="" alt="乐软科技" />
             </div>
             <div>乐软</div>
           </div>
-          <div className='right-header-wrap'>
+          <div className="right-header-wrap">
             <div>首页</div>
             <div>服务</div>
             <div>关于我们</div>
@@ -28,12 +28,7 @@ export const Home2: FC = () => {
         <ul>
           {appRouterPaths.map((p) => (
             <li key={p}>
-              <Link to={p}>
-                {(p === '/'
-                  ? 'home2'
-                  : ''
-                ).toUpperCase()}
-              </Link>
+              <Link to={p}>{(p === '/' ? 'home2' : '').toUpperCase()}</Link>
             </li>
           ))}
         </ul>

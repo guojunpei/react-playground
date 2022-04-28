@@ -8,7 +8,7 @@ const getAppBasename = (appPath = 'joyingsoft') =>
 export const App: FC = () => {
   return (
     <BrowserRouter basename={getAppBasename()}>
-            <AppRouter />
+      <AppRouter />
     </BrowserRouter>
   );
 };
