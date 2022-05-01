@@ -1,9 +1,8 @@
-//@import '../style/style-moudle.scss';
-/*
+@import '../style/style-moudle.scss';
+
 $appColorBg: #212529;
 $appColorContent: white;
 $appColorBtn: blue;
-*/
 
 .home2 {
   display: flex;
@@ -11,7 +10,7 @@ $appColorBtn: blue;
   height: 100%;
   width: 100%;
   text-align: center;
-  background-color: #212529;
+  background-color: $appColorBg;
 
   .main-header {
     background-color: darkslategray;
@@ -41,14 +40,14 @@ $appColorBtn: blue;
       .left-header-wrap > div {
         padding: 8px;
         &:hover {
-          color: blue;
+          color: $appColorBtn;
         }
       }
 
       .right-header-wrap > div {
         padding: 8px;
         &:hover {
-          color: blue;
+          color: $appColorBtn;
         }
       }
     }
