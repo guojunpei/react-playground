@@ -11,12 +11,22 @@ $appColorBtn: blue;
   width: 100%;
   text-align: center;
   background-color: $appColorBg;
+  color: $appColorContent;
 
   .main-header {
     background-color: darkslategray;
     width: 100%;
     display: flex;
     justify-content: center;
+
+    .btn-lang {
+      cursor: pointer;
+      text-align: center;
+      border: 1px solid $appColorBg;
+      border-radius: 50%;
+      background-color: white;
+      color: blue;
+    }
 
     .header-wrap {
       display: flex;
@@ -35,12 +45,6 @@ $appColorBtn: blue;
         display: flex;
         flex-direction: row;
         text-align: center;
-      }
-
-      .btn-lang {
-        cursor: pointer;
-        text-align: center;
-        border: #212529;
       }
 
       .left-header-wrap>div {
