@@ -37,15 +37,23 @@ $appColorBtn: blue;
         text-align: center;
       }
 
-      .left-header-wrap > div {
+      .btn-lang {
+        cursor: pointer;
+        text-align: center;
+        border: #212529;
+      }
+
+      .left-header-wrap>div {
         padding: 8px;
+
         &:hover {
           color: $appColorBtn;
         }
       }
 
-      .right-header-wrap > div {
+      .right-header-wrap>div {
         padding: 8px;
+
         &:hover {
           color: $appColorBtn;
         }
