@@ -30,11 +30,11 @@ $appColorBtn: blue;
       position: relative;
     }
 
-    .btn-lang:hover{
+    .btn-lang:hover {
       background-color: blue;
       color: white;
     }
-/*
+    /*
     .btn-lang:after {
       background-color: blue;
       color: white;
@@ -66,7 +66,7 @@ $appColorBtn: blue;
         text-align: center;
       }
 
-      .left-header-wrap>div {
+      .left-header-wrap > div {
         padding: 8px;
 
         &:hover {
@@ -74,7 +74,7 @@ $appColorBtn: blue;
         }
       }
 
-      .right-header-wrap>div {
+      .right-header-wrap > div {
         padding: 8px;
 
         &:hover {
