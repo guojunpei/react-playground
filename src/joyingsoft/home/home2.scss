@@ -26,8 +26,27 @@ $appColorBtn: blue;
       border-radius: 50%;
       background-color: white;
       color: blue;
+      transition: all 1s;
+      position: relative;
     }
 
+    .btn-lang:hover{
+      background-color: blue;
+      color: white;
+    }
+/*
+    .btn-lang:after {
+      background-color: blue;
+      color: white;
+      z-index: -1;
+      width: 0%;
+      position: absolute;
+    }
+
+    .btn-lang:hover:after {
+      width: 100%;
+    }
+*/
     .header-wrap {
       display: flex;
       flex-direction: row;
@@ -47,7 +66,7 @@ $appColorBtn: blue;
         text-align: center;
       }
 
-      .left-header-wrap > div {
+      .left-header-wrap>div {
         padding: 8px;
 
         &:hover {
@@ -55,7 +74,7 @@ $appColorBtn: blue;
         }
       }
 
-      .right-header-wrap > div {
+      .right-header-wrap>div {
         padding: 8px;
 
         &:hover {
