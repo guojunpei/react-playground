@@ -26,27 +26,14 @@ $appColorBtn: blue;
       border-radius: 50%;
       background-color: white;
       color: blue;
-      transition: all 1s;
-      position: relative;
+      transition: all 1s ease-in-out;
     }
 
     .btn-lang:hover {
       background-color: blue;
       color: white;
     }
-    /*
-    .btn-lang:after {
-      background-color: blue;
-      color: white;
-      z-index: -1;
-      width: 0%;
-      position: absolute;
-    }
 
-    .btn-lang:hover:after {
-      width: 100%;
-    }
-*/
     .header-wrap {
       display: flex;
       flex-direction: row;
