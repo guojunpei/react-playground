@@ -27,11 +27,22 @@ $appColorBtn: blue;
       background-color: white;
       color: blue;
       transition: all 1s ease-in-out;
+      //width: 100%;
+      position: relative;
+    }
+
+    .btn-inner {
+      position: absolute;
+      background-color: blue;
+      width: 0%;
+    }
+
+    .btn-lang:hover .btn-inner {
+      width: 100%;
     }
 
     .btn-lang:hover {
       background-color: blue;
-      color: white;
     }
 
     .header-wrap {

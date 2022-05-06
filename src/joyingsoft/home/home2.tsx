@@ -20,7 +20,11 @@ export const Home2: FC = () => {
             <div>关于我们</div>
             <div>产品</div>
             <div>联系我们</div>
-            <div className="btn-lang">EN</div>
+            <div className="btn-lang">
+              <span lang="en">中</span>
+              <span lang="zh">EN</span>
+              <div className="btn-inner" />
+            </div>
           </div>
         </div>
       </div>
