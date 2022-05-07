@@ -29,20 +29,24 @@ $appColorBtn: blue;
       transition: all 1s ease-in-out;
       //width: 100%;
       position: relative;
+      padding: 8px;
     }
 
+    /*
     .btn-inner {
       position: absolute;
-      background-color: blue;
+      background-color: $appColorBtn;
+      transition: all 1s ease-in-out;
       width: 0%;
     }
 
     .btn-lang:hover .btn-inner {
       width: 100%;
     }
-
+*/
     .btn-lang:hover {
-      background-color: blue;
+      background-color: $appColorBtn;
+      color: white;
     }
 
     .header-wrap {
@@ -68,15 +72,15 @@ $appColorBtn: blue;
         padding: 8px;
 
         &:hover {
-          color: $appColorBtn;
+          color: green;
         }
       }
 
-      .right-header-wrap > div {
+      .right-header-wrap > div:not(:nth-child(6)) {
         padding: 8px;
 
         &:hover {
-          color: $appColorBtn;
+          color: red;
         }
       }
     }
