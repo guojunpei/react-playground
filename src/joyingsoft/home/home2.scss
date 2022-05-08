@@ -19,42 +19,13 @@ $appColorBtn: blue;
     display: flex;
     justify-content: center;
 
-    .btn-lang {
-      cursor: pointer;
-      text-align: center;
-      border: 1px solid $appColorBg;
-      border-radius: 50%;
-      background-color: white;
-      color: blue;
-      transition: all 1s ease-in-out;
-      //width: 100%;
-      position: relative;
-      padding: 8px;
-    }
-
-    /*
-    .btn-inner {
-      position: absolute;
-      background-color: $appColorBtn;
-      transition: all 1s ease-in-out;
-      width: 0%;
-    }
-
-    .btn-lang:hover .btn-inner {
-      width: 100%;
-    }
-*/
-    .btn-lang:hover {
-      background-color: $appColorBtn;
-      color: white;
-    }
-
     .header-wrap {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       padding: 25px;
       width: 80%;
+      color: gray;
 
       .left-header-wrap {
         display: flex;
@@ -66,21 +37,53 @@ $appColorBtn: blue;
         display: flex;
         flex-direction: row;
         text-align: center;
+
+        .btn-lang {
+          cursor: pointer;
+          text-align: center;
+          border: 1px solid $appColorBg;
+          border-radius: 50%;
+          background-color: white;
+          color: blue;
+          transition: all 1s ease-in-out;
+          //width: 100%;
+          position: relative;
+          padding: 8px;
+        }
+/*
+        .btn-inner {
+          position: absolute;
+          background-color: $appColorBtn;
+          transition: all 1s ease-in-out;
+          width: 0%;
+        }
+
+        .btn-lang:hover .btn-inner {
+          width: 100%;
+        }
+*/
+        .btn-lang:hover {
+          background-color: $appColorBtn;
+          color: white;
+        }
+
       }
 
-      .left-header-wrap > div {
+      .left-header-wrap>div {
         padding: 8px;
+        transition: all 1s ease-in-out;
 
         &:hover {
-          color: green;
+          color: white;
         }
       }
 
-      .right-header-wrap > div:not(:nth-child(6)) {
+      .right-header-wrap>div:not(:nth-child(6)) {
         padding: 8px;
+        transition: all 1s ease-in-out;
 
         &:hover {
-          color: red;
+          color: white;
         }
       }
     }
