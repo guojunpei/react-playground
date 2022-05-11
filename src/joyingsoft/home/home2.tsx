@@ -29,14 +29,11 @@ export const Home2: FC = () => {
         </div>
       </div>
       <nav>
-        <ul>
-          {appRouterPaths.map((p) => (
-            <li key={p}>
-              <Link to={p}>{(p === '/' ? 'home2' : '').toUpperCase()}</Link>
-            </li>
-          ))}
-        </ul>
+
       </nav>
+      <div className='js-banner'>
+        <div className='js-banner-content'>河南乐软科技有限公司</div>
+      </div>
       <h1>about</h1>
       <div> about content</div>
       <h1>content 1</h1>
