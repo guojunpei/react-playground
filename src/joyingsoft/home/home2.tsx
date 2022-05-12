@@ -32,10 +32,15 @@ export const Home2: FC = () => {
       <div className="js-banner">
         <div className="js-banner-content">河南乐软科技有限公司</div>
       </div>
-      <h1>about</h1>
-      <div> about content</div>
-      <h1>content 1</h1>
-      <div> content 1 content</div>
+      <div id='services'>
+        <div className='title'>服务</div>
+        <div className='container'>
+          <div>云方案</div>
+          <div>跨平台</div>
+          <div>新技术</div>
+          <div>工匠心</div>
+        </div>
+      </div>
     </div>
   );
 };
