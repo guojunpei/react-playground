@@ -70,7 +70,7 @@ $appColorBtn: blue;
         }
       }
 
-      .left-header-wrap>div {
+      .left-header-wrap > div {
         padding: 8px;
         transition: all 1s ease-in-out;
 
@@ -79,7 +79,7 @@ $appColorBtn: blue;
         }
       }
 
-      .right-header-wrap>div:not(:nth-child(6)) {
+      .right-header-wrap > div:not(:nth-child(6)) {
         padding: 8px;
         transition: all 1s ease-in-out;
 
@@ -90,6 +90,10 @@ $appColorBtn: blue;
     }
   }
 
+  .title-font-size {
+    font-size: larger;
+  }
+
   .js-banner {
     height: 60%;
     width: 100%;
@@ -97,6 +101,11 @@ $appColorBtn: blue;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .js-banner-content {
+      font-weight: bold;
+      color: white;
+    }
   }
 
   #services {
@@ -109,6 +118,7 @@ $appColorBtn: blue;
 
   .title {
     align-items: center;
+    padding: 2%;
   }
 
   .container {
