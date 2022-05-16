@@ -29,7 +29,7 @@ export const Home2: FC = () => {
         </div>
       </div>
       <nav />
-      <div className="js-banner">
+      <div className="js-banner main-sreen">
         <div className="js-banner-content title-font-size">
           河南乐软科技有限公司
         </div>
