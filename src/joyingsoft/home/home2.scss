@@ -135,5 +135,10 @@ $appColorBtn: blue;
     display: flex;
     flex-direction: column;
     padding: 1%;
+    transition: all 1s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
