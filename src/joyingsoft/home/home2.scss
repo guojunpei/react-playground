@@ -75,7 +75,7 @@ $appColorBtn: blue;
       }
 
       .left-header-wrap > div {
-        padding: 8px;
+        padding: 0.5rem 1rem;
         transition: all 1s ease-in-out;
 
         &:hover {
@@ -84,7 +84,7 @@ $appColorBtn: blue;
       }
 
       .right-header-wrap > div:not(:nth-child(6)) {
-        padding: 8px;
+        padding: 0.5rem 1rem;
         transition: all 1s ease-in-out;
 
         &:hover {
