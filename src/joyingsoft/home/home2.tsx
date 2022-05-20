@@ -16,7 +16,9 @@ export const Home2: FC = () => {
           </div>
           <div className="right-header-wrap">
             <div>首页</div>
-            <div>服务</div>
+            <div>
+              <a href="#services">服务</a>
+              </div>
             <div>关于我们</div>
             <div>产品</div>
             <div>联系我们</div>
