@@ -21,8 +21,12 @@ export const Home2: FC = () => {
             <div>产品</div>
             <div>联系我们</div>
             <div className="btn-lang">
-              <span id='lang-en' lang="en">中</span>
-              <span id='lang-zh' lang="zh">EN</span>
+              <span id="lang-en" lang="en">
+                中
+              </span>
+              <span id="lang-zh" lang="zh">
+                EN
+              </span>
               <div className="btn-inner" />
             </div>
           </div>
