@@ -15,9 +15,15 @@ export const Home2: FC = () => {
             <div>乐软</div>
           </div>
           <div className="right-header-wrap">
-            <div>首页</div>
             <div>
-              <a className='js-link' href="#services">服务</a>
+              <a className="js-link" href="#home">
+                首页
+              </a>
+            </div>
+            <div>
+              <a className="js-link" href="#services">
+                服务
+              </a>
             </div>
             <div>关于我们</div>
             <div>产品</div>

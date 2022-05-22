@@ -13,6 +13,20 @@ $appColorBtn: blue;
   background-color: $appColorBg;
   color: $appColorContent;
 
+  .js-link {
+    color: lightgray;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+    &:link {
+      color: lightgray;
+    }
+    &:visited {
+      color: lightgray;
+    }
+  }
+
   .main-header {
     background-color: #2575fc;
     width: 100%;
