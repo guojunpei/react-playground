@@ -25,9 +25,21 @@ export const Home2: FC = () => {
                 服务
               </a>
             </div>
-            <div>关于我们</div>
-            <div>产品</div>
-            <div>联系我们</div>
+            <div>
+              <a className='js-link' href="">
+                关于我们
+                </a>
+              </div>
+            <div>
+              <a className='js-link' href="">
+                产品
+                </a>
+              </div>
+            <div>
+              <a className='js-link' href="">
+                联系我们
+                </a>
+              </div>
             <div className="btn-lang">
               <span id="lang-en" lang="en">
                 中
