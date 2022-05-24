@@ -26,20 +26,20 @@ export const Home2: FC = () => {
               </a>
             </div>
             <div>
-              <a className='js-link' href="">
+              <a className="js-link" href="#services">
                 关于我们
-                </a>
-              </div>
+              </a>
+            </div>
             <div>
-              <a className='js-link' href="">
+              <a className="js-link" href="#services">
                 产品
-                </a>
-              </div>
+              </a>
+            </div>
             <div>
-              <a className='js-link' href="">
+              <a className="js-link" href="#services">
                 联系我们
-                </a>
-              </div>
+              </a>
+            </div>
             <div className="btn-lang">
               <span id="lang-en" lang="en">
                 中
