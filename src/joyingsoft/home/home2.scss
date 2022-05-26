@@ -21,6 +21,15 @@ $appColorBtn: blue;
     }
   }
 
+  
+  .title-font-size {
+    font-size: 1.8rem;
+  }
+
+  .content-font-size {
+    font-size: 1rem;
+  }
+
   .main-header {
     background-color: #2575fc;
     width: 100%;
@@ -100,10 +109,6 @@ $appColorBtn: blue;
         }
       }
     }
-  }
-
-  .title-font-size {
-    font-size: larger;
   }
 
   .main-sreen {
