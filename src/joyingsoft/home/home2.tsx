@@ -10,9 +10,15 @@ export const Home2: FC = () => {
         <div className="header-wrap">
           <div className="left-header-wrap">
             <div>
-              <img src="" alt="乐软科技" />
+              <a className="js-link" href="#home">
+                <img src="" alt="乐软科技" />
+              </a>
             </div>
-            <div>乐软</div>
+            <div>
+              <a className="js-link" href="#home">
+                乐软
+              </a>
+            </div>
           </div>
           <div className="right-header-wrap">
             <div>
