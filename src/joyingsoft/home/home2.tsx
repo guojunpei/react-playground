@@ -65,7 +65,10 @@ export const Home2: FC = () => {
         </div>
       </div>
       <div id="services">
-        <div className="title title-font-size">服务</div>
+        <div>
+          <div className="title title-font-size">服务</div>
+          <hr className="js-hr" />
+        </div>
         <div className="container">
           <div className="content">
             <div>
