@@ -64,7 +64,7 @@ export const Home2: FC = () => {
           河南乐软科技有限公司
         </div>
       </div>
-      <div id="services">
+      <div id="services" className="main-cotent">
         <div>
           <div className="title title-font-size">服务</div>
           <hr className="js-hr" />
