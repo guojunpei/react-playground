@@ -145,11 +145,13 @@ $appColorBtn: blue;
   }
 
   hr {
+    width: 100%;
     border-color: #2575fc;
-    //border-width: 1.5px;
+    border-width: 2px;
     border-style: solid;
     //height: 3px;
     //color: #2575fc;
+    //overflow: visible;
   }
 
   .container {
