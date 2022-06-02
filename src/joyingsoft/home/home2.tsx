@@ -101,10 +101,37 @@ export const Home2: FC = () => {
             </div>
             <div className="title-font-size">工匠心</div>
             <div className="content-font-size">
-              我们乐于寻找解决方案，热爱创造高效易用的软件。
+              "我们乐于寻找解决方案，热爱创造高效易用的软件。"
             </div>
           </div>
         </div>
+        <div>
+          <a className="js-link" href="#about">
+            ↓
+          </a>
+        </div>
+      </div>
+      <div id="about" className="main-cotent">
+        <div>
+          <div className="title title-font-size">灵活开放，合作共赢</div>
+          <hr />
+        </div>
+        <div className="container">
+          <div className="content">
+            <p>
+              <span>
+                "提供高性能，高可靠，可伸缩，灵活，安全，稳定的技术服务。"
+                <br />
+                "我们倡导高效务实的工作方式，敢于尝试，不断创新。"
+                <br />
+                "用心打造软件是一种快乐，我们希望我们的软件不但能提高您的工作效率，更能激发您在工作学习中的乐趣。"
+              </span>
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
     </div>
   );
