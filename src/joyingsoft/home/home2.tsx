@@ -118,7 +118,7 @@ export const Home2: FC = () => {
         </div>
         <div className="container">
           <div className="content">
-            <p>
+            <p  className="content-font-size">
               <span>
                 "提供高性能，高可靠，可伸缩，灵活，安全，稳定的技术服务。"
                 <br />
