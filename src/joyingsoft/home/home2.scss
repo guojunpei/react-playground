@@ -160,6 +160,16 @@ $appColorBtn: blue;
     //overflow: visible;
   }
 
+  .btn-next {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid $appColorBg;
+    border-radius: 50%;
+    background-color: #2575fc;
+    color: black;
+    padding: 1rem 2rem;
+  }
+
   .container {
     width: 60%;
     display: flex;
