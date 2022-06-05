@@ -151,7 +151,7 @@ $appColorBtn: blue;
   }
 
   hr {
-    width: 100%;
+    max-width: 50px;
     border-color: #2575fc;
     border-width: 2px;
     border-style: solid;
@@ -171,7 +171,14 @@ $appColorBtn: blue;
   }
 
   .container {
-    width: 60%;
+    padding: 1rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-row {
+    text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
