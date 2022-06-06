@@ -64,10 +64,10 @@ export const Home2: FC = () => {
           河南乐软科技有限公司
         </div>
       </div>
-      <div id="services" className="main-cotent">
+      <div id="services" className="main-cotent bg-light">
         <div className="container">
           <div className="title title-font-size">服务</div>
-          <hr />
+          <hr className="hr-color"/>
         </div>
         <div className="container">
           <div className="container-row">
@@ -113,10 +113,10 @@ export const Home2: FC = () => {
           </a>
         </div>
       </div>
-      <div id="about" className="main-cotent">
+      <div id="about" className="main-cotent bg">
         <div>
           <div className="title title-font-size">灵活开放，合作共赢</div>
-          <hr />
+          <hr className="hr-color-light"/>
         </div>
         <div className="container">
           <div className="content">

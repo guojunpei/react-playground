@@ -152,12 +152,30 @@ $appColorBtn: blue;
 
   hr {
     max-width: 50px;
-    border-color: #2575fc;
     border-width: 2px;
     border-style: solid;
+    border-color: #2575fc;
     //height: 3px;
     //color: #2575fc;
     //overflow: visible;
+  }
+
+  .bg-light {
+    background-color: white;
+    color: black;
+  }
+
+  .hr-color-light {
+    border-color: #2575fc;
+  }
+
+  .hr-color-light {
+    border-color: white;
+  }
+
+  .bg {
+    background-color: #2575fc;
+    color: white;
   }
 
   .btn-next {
